@@ -6,7 +6,7 @@ struct Bid {
 - This line defines a new struct (a custom data type) named Bid.
 - A Bid struct contains two fields:
     - address bidder; - the Ethereum address of the bidder.
-    - uint amount; - the amount of the bid (in wei).
+    - uint amount; - the bid amount (in wei).
 
 1. struct AuctionItem {
 
@@ -14,7 +14,7 @@ struct Bid {
 - An AuctionItem struct contains several fields:
     - string name; - the name of the auction item.
     - uint startPrice; - the starting price of the auction.
-    - uint minIncrement; - the minimum increment required for new bids.
+    - uint minIncrement; - the minimum increment required for new bids.(if the current highest bid is 10eth the minIncrement is 1eth a new bid is 11 because it's greater than 10+ 1)
     - uint auctionEndTime; - the timestamp when the auction ends.
     - mapping (uint => Bid) bids; - a mapping of bid IDs to Bid structs.
     - address highestBidder; - the Ethereum address of the highest bidder.
